@@ -1,0 +1,81 @@
+.scoreboard{
+     width: 100%;
+    height:3em;
+    background-color: black;
+    color: white;
+    position: absolute;
+    z-index: 10;
+}
+.scoreboard p{
+    margin-left:5px;
+    float: left;
+   
+}
+.scoreboard span{
+    float:right;
+    margin-right: 5px;
+    
+}
+.container{
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: #470bd4;
+}
+#floor{
+      position: absolute;
+    height: 7%;
+    width: 100%;
+    background-color: #292929;
+    bottom: 0;
+    z-index: 10;
+}
+#basket {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 5px;
+    background: url('basket.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 11;
+}
+.droper{
+    
+    position: absolute;
+    top: 0;
+    height: 5%;
+    width: 2%;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+#ball1{
+    left: 10%;
+    background-color: rgb(247, 162, 214);
+}
+#ball2{
+    left: 25%;
+    background-color: rgb(40, 158, 89);
+}
+#ball3{
+    left: 40%;
+    background-color: rgba(248, 175, 17, 0.692);
+}
+#ball4{
+    left: 55%;
+    background-color: rgb(42, 173, 167);
+}
+#ball5{
+    left: 70%;
+    background-color: rgb(57, 227, 233);
+}
+#ball6{
+    left: 85%;
+    background-color: rgb(107, 80, 82);
+}

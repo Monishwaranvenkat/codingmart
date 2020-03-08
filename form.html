@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+        
+   
     <!--jquery script-->
-    <script type = "text/javascript" 
-         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="formvalidation.js" ></script>
     <!-- Latest compiled and minified CSS bootsrap 4.3.1 -->
     <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
     <!-- Latest compiled and minified CSS -->
@@ -14,21 +17,21 @@
     <!-- font awesome icon-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
-<body>
+<body onload="check()">
     
     <div class="container-fluid ">
         <di
             <div class="table-responsive">
                 <div class="col-lg-12">
-                    <form>
+                   <form action="#">
             <table class="table table-striped table-bordered table-active">
                 <tr>
                     <td class="col-md-3">
                         <label for="firstname">First Name:<sup class="text-danger">*</sup></label>
                     </td>
                     <td>
-                        <input class="float-left mr-3" type="text" name="firstname" id="fname"/>
-                         <p class="small ">(maximum 35 characters)</p>
+                        <input class="float-left mr-3" type="text" name="firstname" id="fname" value=""/>
+                         <p class="small " id ="fname-warn">(maximum 35 characters)</p>
                     </td>
                 </tr>
                 <tr>
@@ -37,7 +40,7 @@
                     </td>
                     <td>
                         <input class="float-left mr-3" type="text" name="cnf-firstname" id="cnf-fname"/>
-                        <p class="small ">(maximum 35 characters)</p>
+                        <p class="small " id="cnf-fname-warn">(maximum 35 characters)</p>
                     </td>
                 </tr>
                  <tr>
@@ -46,7 +49,7 @@
                     </td>
                     <td>
                         <input class="float-left mr-3" type="text" name="middlename" id="mname"/>
-                        <p class="small ">(maximum 35 characters)</p>
+                        <p class="small" id ="mname-warn">(maximum 35 characters)</p>
                     </td>
                 </tr>
                 <tr>
@@ -55,7 +58,7 @@
                     </td>
                     <td>
                         <input class="float-left mr-3" type="text" name="cnf-middlename" id="cnf-mname"/>
-                        <p class="small ">(maximum 35 characters)</p>
+                        <p class="small " id ="cnf-mname-warn">(maximum 35 characters)</p>
                     </td>
                 </tr>
                 <tr>
@@ -64,7 +67,7 @@
                     </td>
                     <td>
                         <input  class="float-left mr-3" type="text" name="lastname" id="lname"/>
-                        <p class="small ">(maximum 35 characters)</p>
+                        <p class="small " id ="lname-warn">(maximum 35 characters)</p>
                     </td>
                 </tr>
                 <tr>
@@ -73,7 +76,7 @@
                     </td>
                     <td>
                         <input class="float-left mr-3" type="text" name="cnf-lastname" id="cnf-lname">
-                        <p class="small ">(maximum 35 characters)</p>
+                        <p class="small " id ="cnf-lname-warn">(maximum 35 characters)</p>
                     </td>
                 </tr>
                 <tr>
@@ -98,8 +101,7 @@
                     </td>
                     <td>
                         <p class="float-left m-3">+91</p><input class="float-left m-3" type="text" name="mobile" id="mobile">
-                        <p class="float-left m-3">(10 digits)</p>
-                        <p class="m-3"><b>Please Do Not Prefix(0)</b></p>
+                        <p class="float-left m-3" id="mobile-warn">(10 digits) <b>Please Do Not Prefix(0-5)</b></p>
                     </td>
                 </tr>
                 <tr>
@@ -109,8 +111,7 @@
                     <td>
                         <p class="float-left m-3">+91</p>
                         <input class="float-left m-3" type="text" name="cnf-mobile" id="cnf-mobile">
-                        <p class="float-left m-3">(10 digits)</p>
-                        <p class="m-3"><b>Please Do Not Prefix(0)</b></p>
+                        <p class="float-left m-3" id="cnf-mobile-warn">(10 digits) <b>Please Do Not Prefix(0-5)</b></p>
                     </td>
                 </tr>
                 <tr>
@@ -120,8 +121,7 @@
                     <td>
                         <p class="float-left m-3">+91</p>
                         <input class="float-left m-3" type="text" name="alt-no" id="alt-no">
-                        <p class="float-left m-3">(10 digits)</p>
-                        <p class="m-3"><b>Please Do Not Prefix(0)</b></p>
+                        <p class="float-left m-3" id="altno-warn">(10 digits) <b>Please Do Not Prefix(0)</b></p>
                     </td>
                 </tr>
                 <tr>
@@ -153,12 +153,35 @@
                         <label for="cnf-email">Confirm Email id:</label>
                     </td>
                     <td>
-                        <input class="float-left m-3" type="email" name="cnf-email" id="cnf-email"/>
+                        <input class="float-left m-3" type="text" name="cnf-email" id="cnf-email"/>
                         <p class="float-left m-3">(maximum 60 characters)</p>
                     </td>
                 </tr>
+                <tr>
+                    <td class="col-md-3">
+                        
+                    </td>
+                    <td>
+                        
+                        <p class="float-left m-3 text-primary"> Enter the Word in TextBox as in the image</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">
+                        <label for="capthcha">Security Code:</label>
+                    </td>
+                    <td>
+                        <input class="float-left m-3" type="text" name="capthcha" id="capthcha"/>
+                        <p class="float-left m-3 bg-light p-3" id="cap" style="-webkit-user-select: none;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" onclick="test()" value="submit">
+                    </td>
+                </tr>
             </table>
-            </form>
+       </form>
             </div>
         </div>
 
