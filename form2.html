@@ -1,0 +1,64 @@
+<html>
+    <head>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            </script>
+        <script src="form2.js" ></script>
+        <style>
+            input ,p{
+                float: left;
+                margin: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <form name="myForm" action="#"  method="post">
+      <tr>
+          <td>First Name :</td>
+          <td>
+              <input type="text" id="fname" onkeyup="vfname()">
+                <p id="fname-warn">valid</p>
+        </td>
+      </tr> 
+      <tr>
+          <td>Last Name</td>
+          <td>
+              <input type="text" id="lname" onkeyup="vlname()">
+            <p id="lname-warn">valid</p>
+        </td>
+      </tr> 
+      <tr>
+          <td>user id:</td>
+          <td>
+              <input type="text" id="userid">
+            <p id="userid-warn">valid</p>
+        </td>
+      </tr> 
+      <tr>
+          <td>Email :</td>
+          <td>
+              <input type="text" id="email" onkeydown="vemail()">
+            <p id="email-warn">valid</p>
+        </td>
+      </tr> 
+      <tr>
+          <td>password:</td>
+          <td>
+              <input type="password" id="pass">
+            <p id="pass-warn">valid</p>
+        </td>
+      </tr> 
+      <tr>
+          <td>confirm password:</td>
+          <td>
+              <input type="password" id="cnf-pass">
+            <p id="cnf-pass-warn">valid</p>
+        </td>
+      </tr> 
+      <tr>
+          <td><input type="button" onclick="validate()" value="Submit"></td>
+      </tr> 
+        </table>
+</form>
+    </body>
+</html>

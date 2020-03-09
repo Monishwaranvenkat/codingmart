@@ -57,6 +57,7 @@ function validate(){
    
    if (!error){
        alert("registered successfully")
+       
        location.reload()
    }else{
        check();

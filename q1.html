@@ -2,9 +2,7 @@
 <html>
 <head>
     <!--jquery script-->
-    <script type = "text/javascript" 
-         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
+
     <!-- Latest compiled and minified CSS bootsrap 4.3.1 -->
     <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
     <!-- Latest compiled and minified CSS -->
@@ -54,22 +52,18 @@
             </table>
             </div>
             </div>
-            <div class="row">
-            <div class="col-lg-6 bg-primary">
-                <h6>c1</h6>
-            </div>
-            <div class="col-lg-6 bg-dark">
-                          <h6 class="text-light">c1</h6>      
-            </div>
-            </div>
         </div>
     </div>
+        <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
     <script>
-        
+        row=2
         $(document).ready(function(){
             $("#addrow").click(function(){
-                
-                $("#table").append('<tr class="tr"><td>1</td><td>inspector</td><td>3</td><td>25 to 42years</td><td>5000-52000</td><td><i class="fas fa-trash-alt text-primary del" ></i></td>></tr>');
+                var id="row"+row
+                row+=1
+                $("#table").append('<tr class="tr" id="'+id+'"><td>1</td><td>inspector</td><td>3</td><td>25 to 42years</td><td>5000-52000</td><td><i class="fas fa-trash-alt text-primary del" ></i></td>></tr>');
            });
            $(".del").click(function(){
                 $(this).parents('tr').remove();

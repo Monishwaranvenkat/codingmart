@@ -1,0 +1,23 @@
+<html>
+    <head>
+         <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+        <script>
+            function addElement(){
+                value=document.getElementById("elm").value
+                $("#select").append('<option value="'+value+'">'+value+'</option>');
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+            <input type="text" placeholder="Enter the option to be add in select list" id="elm"/>
+            <input type="submit" value="add" onclick="addElement()"/>
+        <select id="select">
+            <option value="1">one</option>
+            <option value="2">two</option>
+        </select>
+    </body>
+</html>
