@@ -12,47 +12,47 @@
     </head>
     <body>
         <table>
-            <form name="myForm" action="#"  method="post">
+            <form name="form" action="form2.html"  method="post">
       <tr>
           <td>First Name :</td>
           <td>
               <input type="text" id="fname" onkeyup="vfname()">
-                <p id="fname-warn">valid</p>
+                <p id="fname-warn"></p>
         </td>
       </tr> 
       <tr>
           <td>Last Name</td>
           <td>
               <input type="text" id="lname" onkeyup="vlname()">
-            <p id="lname-warn">valid</p>
+            <p id="lname-warn"></p>
         </td>
       </tr> 
       <tr>
           <td>user id:</td>
           <td>
-              <input type="text" id="userid">
-            <p id="userid-warn">valid</p>
+              <input type="text" id="userid" onkeyup="vuserid()">
+            <p id="userid-warn"></p>
         </td>
       </tr> 
       <tr>
           <td>Email :</td>
           <td>
-              <input type="text" id="email" onkeydown="vemail()">
-            <p id="email-warn">valid</p>
+              <input type="text" id="email" onkeyup="vemail()">
+            <p id="email-warn"></p>
         </td>
       </tr> 
       <tr>
           <td>password:</td>
           <td>
-              <input type="password" id="pass">
-            <p id="pass-warn">valid</p>
+              <input type="password" id="pass" onkeyup="vpass()">
+            <p id="pass-warn"></p>
         </td>
       </tr> 
       <tr>
           <td>confirm password:</td>
           <td>
-              <input type="password" id="cnf-pass">
-            <p id="cnf-pass-warn">valid</p>
+              <input type="password" id="cnf-pass" onkeyup="vcnfpass()">
+            <p id="cnf-pass-warn"></p>
         </td>
       </tr> 
       <tr>
